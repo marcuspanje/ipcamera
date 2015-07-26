@@ -1,0 +1,20 @@
+image_width: 640
+image_height: 480
+camera_name: foscam
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [1085.996898, 0, 399.486504, 0, 1103.685017, 205.006502, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-1.13918, 0.737953, 0.011955, -0.031252, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [949.195496, 0, 408.529709, 0, 0, 1034.884766, 202.249345, 0, 0, 0, 1, 0]

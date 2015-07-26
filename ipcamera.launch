@@ -1,0 +1,11 @@
+<launch>
+   <arg name="camera" value="foscam"/>
+   <param name="/camera" value="$(arg camera)"/>
+   <rosparam command="load" file="$(find ipcamera)/calib/foscam_preset1/ost.yml"/>
+   <node pkg="ipcamera" type="ipcamera_publisher" name="ipcamera" output="screen" ns="$(arg camera)">
+     <param name="encoding" value="bgr8"/>
+     <param name="camera_calibration_file" value="$(find ipcamera)/calib/foscam_preset1/ost.yml"/>
+   </node>
+   <node pkg="image_proc" type="image_proc" name="ipcamera_image_proc" output="screen" ns="$(arg camera)"/> 
+   
+</launch>
